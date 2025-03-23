@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Invitation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="start">
+    <h1>Hey, want to go on a date?</h1>
+    <button onclick="showForm()">Yes!</button>
+  </div>
+
+  <div id="form" style="display: none;">
+    <label for="name">What's your name?</label>
+    <input type="text" id="name">
+    
+    <label for="place">Where should we go?</label>
+    <input type="text" id="place">
+    
+    <label for="time">What time?</label>
+    <input type="time" id="time">
+    
+    <button onclick="submitForm()">Submit</button>
+  </div>
+
+  <div id="celebration" style="display: none;">
+    <h2 id="message"></h2>
+    <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Celebration" width="300">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
