@@ -25,8 +25,7 @@ function processStep2() {
   } else if (age > 17 && age < 90) {
     alert("WRONG! TOO OLD!");
   } else if (age >= 90) {
-    // For 90 or above, show fake multiple choice.
-    document.getElementById('agePrompt').innerText = "GOSH DAMN YOU'RE OLD!";
+    // For 90 or above, show fake multiple choice
     document.getElementById('ageChoice').style.display = 'block';
   } else if (age === 17) {
     // Valid age: move to final step.
