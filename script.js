@@ -80,23 +80,31 @@ function goToNextStep() {
 
 // Simple Confetti Animation (a basic example; you can improve this as needed)
 function startConfetti() {
-  // Create a container for confetti pieces.
+  // Create a container for confetti and hearts.
   const confettiContainer = document.createElement('div');
   confettiContainer.id = 'confettiContainer';
   document.body.appendChild(confettiContainer);
 
-  // Create multiple confetti pieces.
-  for (let i = 0; i < 100; i++) {
-    const confetti = document.createElement('div');
-    confetti.classList.add('confetti');
-    // Randomize position and animation duration.
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.animationDuration = 2 + Math.random() * 3 + 's';
-    confettiContainer.appendChild(confetti);
+  // Create multiple confetti pieces and hearts.
+  for (let i = 0; i < 50; i++) {
+    createConfettiPiece(confettiContainer, "confetti"); // Normal confetti
+    createConfettiPiece(confettiContainer, "heart"); // Hearts
   }
 
   // Remove confetti after 5 seconds.
   setTimeout(() => {
     confettiContainer.remove();
   }, 5000);
+}
+
+// Function to create confetti or hearts
+function createConfettiPiece(container, type) {
+  const piece = document.createElement('div');
+  piece.classList.add(type);
+
+  // Randomize position and animation duration.
+  piece.style.left = Math.random() * 100 + 'vw';
+  piece.style.animationDuration = 2 + Math.random() * 3 + 's';
+
+  container.appendChild(piece);
 }
