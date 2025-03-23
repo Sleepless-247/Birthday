@@ -37,16 +37,22 @@ function processStep2() {
 function handleAgeChoice(choice) {
   if (choice === "yes") {
     document.getElementById('ageResponse').innerText = "Okay... if you say so, grandma. I guess I'll let you go to the next page. Don't fall over on the way there tho.";
-    document.getElementById('nextButton90').style.display = 'block';
+    
+    // Instead of showing a Next button, just move to the next step immediately.
+    setTimeout(() => {
+      moveToFinalStep(90);
+    }, 2000); // Delay for effect
   } else if (choice === "no") {
     alert("Yeah, I didn't think so. I didn't buy nearly enough candles for that! Better try again.");
     document.getElementById('ageInput').value = "";
+    
     // Hide the fake multiple choice again so she can reenter age.
     document.getElementById('ageChoice').style.display = 'none';
     document.getElementById('ageResponse').innerText = "";
     document.getElementById('agePrompt').innerText = "Aisling?! I heard it was your birthday??? Happy Birthday my Vampire Garfield twilight girlfriend!";
   }
 }
+
 
 // Move to final step (used for both valid age 17 and approved 90+).
 function moveToFinalStep(age) {
