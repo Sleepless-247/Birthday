@@ -1,6 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Times New Roman", serif;
+  background-color: #8B0000;
   text-align: center;
+  color: white;
   margin: 50px;
 }
 
@@ -18,10 +20,30 @@ button {
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
 
 img {
   max-width: 100%;
   height: auto;
   margin: 20px 0;
+}
+
+/* Confetti Animation */
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: gold;
+  opacity: 0.7;
+  animation: fall 3s linear infinite;
 }
