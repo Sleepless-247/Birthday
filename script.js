@@ -33,7 +33,6 @@ function processStep2() {
   }
 }
 
-// Handle Fake Multiple Choice for ages 90 or above.
 // Handles Yes/No choice for age confirmation
 function handleAgeChoice(choice) {
   if (choice === 'yes') {
@@ -57,9 +56,8 @@ function retryAge() {
   document.getElementById('topMessage').innerHTML = ''; // Clear message
   document.getElementById('ageChoice').style.display = 'none'; // Hide Yes/No buttons
   document.getElementById('retryButton').style.display = 'none'; // Hide Retry button
+  document.getElementById('nextButton').style.display = 'none'; // Hide Next button if visible
 }
-
-
 
 // Move to final step (used for both valid age 17 and approved 90+).
 function moveToFinalStep(age) {
@@ -72,6 +70,12 @@ function moveToFinalStep(age) {
   // Trigger Confetti Animation and Play Birthday Horn Sound.
   startConfetti();
   document.getElementById('birthdayHorn').play();
+}
+
+// When the Next Page button is clicked after a "Yes" in the 90+ case.
+function goToNextStep() {
+  // This will call moveToFinalStep with age 90.
+  moveToFinalStep(90);
 }
 
 // Simple Confetti Animation (a basic example; you can improve this as needed)
