@@ -23,6 +23,7 @@ button {
   background-color: white;
   color: black;
   border: 2px solid black;
+  margin: 5px;
 }
 
 img {
@@ -31,19 +32,28 @@ img {
   margin: 20px 0;
 }
 
-/* Confetti Animation */
+/* Confetti styles */
 @keyframes fall {
   0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
   100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
 }
 
-.confetti {
+#confettiContainer {
+  pointer-events: none;
   position: fixed;
   top: 0;
-  left: 50%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.confetti {
+  position: absolute;
   width: 10px;
   height: 10px;
   background-color: gold;
   opacity: 0.7;
-  animation: fall 3s linear infinite;
+  animation: fall linear infinite;
 }
