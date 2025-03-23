@@ -37,7 +37,9 @@ function processStep2() {
 function handleAgeChoice(choice) {
   if (choice === 'yes') {
     document.getElementById('topMessage').innerHTML = 
-      "<p>Okay... if you say so grandma. I guess I'll let you go to the next page. Don't fall over on the way there tho.</p>";
+  "<p>Okay... if you say so grandma. I guess I'll let you go to the next page. Don't fall over on the way there tho.</p>" +
+  "<img src='https://static.wikia.nocookie.net/garfield/images/c/c9/GarfieldOlderandWiderCover.png/revision/latest/thumbnail/width/360/height/450?cb=20181006065119' alt='Funny grandma' style='width: 200px; display: block; margin-top: 10px;'>";
+
 
     document.getElementById('ageChoice').style.display = 'none'; // Hide Yes/No buttons
     document.getElementById('nextButton').style.display = 'block'; // Show Next button
