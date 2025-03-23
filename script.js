@@ -34,24 +34,31 @@ function processStep2() {
 }
 
 // Handle Fake Multiple Choice for ages 90 or above.
+// Handles Yes/No choice for age confirmation
 function handleAgeChoice(choice) {
-  if (choice === "yes") {
-    document.getElementById('ageResponse').innerText = "Okay... if you say so, grandma. I guess I'll let you go to the next page. Don't fall over on the way there tho.";
-    
-    // Instead of showing a Next button, just move to the next step immediately.
-    setTimeout(() => {
-      moveToFinalStep(90);
-    }, 2000); // Delay for effect
-  } else if (choice === "no") {
-    alert("Yeah, I didn't think so. I didn't buy nearly enough candles for that! Better try again.");
-    document.getElementById('ageInput').value = "";
-    
-    // Hide the fake multiple choice again so she can reenter age.
-    document.getElementById('ageChoice').style.display = 'none';
-    document.getElementById('ageResponse').innerText = "";
-    document.getElementById('agePrompt').innerText = "Aisling?! I heard it was your birthday??? Happy Birthday my Vampire Garfield twilight girlfriend!";
+  if (choice === 'yes') {
+    document.getElementById('topMessage').innerHTML = 
+      "<p>Okay... if you say so grandma. I guess I'll let you go to the next page. Don't fall over on the way there tho.</p>";
+
+    document.getElementById('ageChoice').style.display = 'none'; // Hide Yes/No buttons
+    document.getElementById('nextButton').style.display = 'block'; // Show Next button
+  } else {
+    document.getElementById('topMessage').innerHTML = 
+      "<p>Yeah, I didn't think so. I didn't buy nearly enough candles for that! Better try again.</p>";
+
+    document.getElementById('ageChoice').style.display = 'none'; // Hide Yes/No buttons
+    document.getElementById('retryButton').style.display = 'block'; // Show Retry button
   }
 }
+
+// Resets age input so they can try again
+function retryAge() {
+  document.getElementById('ageInput').value = ''; // Clear the input
+  document.getElementById('topMessage').innerHTML = ''; // Clear message
+  document.getElementById('ageChoice').style.display = 'none'; // Hide Yes/No buttons
+  document.getElementById('retryButton').style.display = 'none'; // Hide Retry button
+}
+
 
 
 // Move to final step (used for both valid age 17 and approved 90+).
