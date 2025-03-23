@@ -65,7 +65,26 @@ img {
   width: 15px;
   height: 15px;
   background-color: pink;
-  opacity: 0.8;
-  clip-path: path("M7.5 12.5s5-3.5 5-7.5-2.5-5-5-2.5-5-2.5-5 2.5 5 7.5 5 7.5z");
+  transform: rotate(-45deg);
   animation: fall linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7.5px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 7.5px;
 }
