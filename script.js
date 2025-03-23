@@ -70,6 +70,7 @@ function moveToFinalStep(age) {
   // Trigger Confetti Animation and Play Birthday Horn Sound.
   startConfetti();
   document.getElementById('birthdayHorn').play();
+  document.getElementById('birthdaysong').play();
 }
 
 // When the Next Page button is clicked after a "Yes" in the 90+ case.
