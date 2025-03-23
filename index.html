@@ -17,13 +17,9 @@
   </div>
 
   <!-- Step 2: Age input -->
+<!-- Step 2: Age input -->
 <div id="step2" class="step" style="display: none;">
-  <div id="ageResponse" style="font-size: 1.2em; font-weight: bold;"></div>
-  <div id="ageChoice" style="display: none;">
-    <p>Are you sure that's right?</p>
-    <button onclick="handleAgeChoice('yes')">Yes</button>
-    <button onclick="handleAgeChoice('no')">No</button>
-  </div>
+  <div id="topMessage" style="font-size: 1.5em; font-weight: bold; color: white;"></div>
 
   <h1 id="agePrompt">Aisling?! I heard it was your birthday??? Happy Birthday my Vampire Garfield twilight girlfriend!</h1>
   <p>How old are you turning sweetie?</p>
@@ -31,12 +27,17 @@
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-TLW5mp6tNPtK8uclLKzllvNgi5FfzCkprQ&s">
   <input type="number" id="ageInput" placeholder="Enter your age">
   <button onclick="processStep2()">Next</button>
-</div>
-      <p id="ageResponse"></p>
-      <button id="nextButton90" style="display: none;" onclick="moveToFinalStep(90)">Next</button>
-    </div>
+
+  <div id="ageChoice" style="display: none;">
+    <p>Are you sure that's right?</p>
+    <button onclick="handleAgeChoice('yes')">Yes</button>
+    <button onclick="handleAgeChoice('no')">No</button>
   </div>
 
+  <button id="retryButton" onclick="retryAge()" style="display: none;">Try Again</button>
+  <button id="nextButton" style="display: none;" onclick="goToNextStep()">Next Page</button>
+</div>
+  
   <!-- Step 3: Celebration -->
   <div id="step3" class="step" style="display: none;">
     <h2 id="celebrationMessage"></h2>
