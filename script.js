@@ -38,7 +38,8 @@ function handleAgeChoice(choice) {
   if (choice === 'yes') {
     document.getElementById('topMessage').innerHTML = 
   "<p>Okay... if you say so grandma. I guess I'll let you go to the next page. Don't fall over on the way there tho.</p>" +
-   <img src="https://m.media-amazon.com/images/I/511tFFp7+fL._AC_UF1000,1000_QL80_.jpg">
+      "<img src='https://m.media-amazon.com/images/I/511tFFp7+fL._AC_UF1000,1000_QL80_.jpg' style='width: 200px; display: block; margin-top: 10px;'>";
+
 
 
     document.getElementById('ageChoice').style.display = 'none'; // Hide Yes/No buttons
