@@ -62,7 +62,7 @@ function retryAge() {
 // Move to final step (used for both valid age 17 and approved 90+).
 function moveToFinalStep(age) {
   document.getElementById('step2').style.display = 'none';
-  const message = `Wow, I can't believe you're already ${age} sweetie, but I'm so happy I got to spend these past few months with you! I'm so lucky to know the amazing, intelligent, hardworking, and extremely beautiful girl I'm privileged to call my girlfriend. I hope ${age} treats you well and that I'm there for your next birthday too!`;
+  const message = `Wow, I can't believe you're already ${age} sweetie, but I'm so happy I've gotten to spend these past few months with you! I'm so so lucky to have the chance to know the amazing, intelligent, hardworking, and extremely beautiful girl I'm privileged to call my girlfriend. I hope ${age} treats you well and that I'm there for your next birthday too!`;
   
   document.getElementById('celebrationMessage').innerText = message;
   document.getElementById('step3').style.display = 'block';
