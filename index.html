@@ -10,8 +10,7 @@
   <!-- Step 1: Who are you? -->
   <div id="step1" class="step">
     <h1>Who are you?</h1>
-    <!-- Replace the URL below with your chosen image -->
-    <img src="https://tr.rbxcdn.com/180DAY-f730a3066aafff9e5d0e66e25dc20411/420/420/Hat/Webp/noFilter" alt="https://tr.rbxcdn.com/180DAY-f730a3066aafff9e5d0e66e25dc20411/420/420/Hat/Webp/noFilter">
+    <img src="your-image-url-here.jpg" alt="Who are you?">
     <input type="text" id="nameInput" placeholder="Enter your answer">
     <button onclick="processStep1()">Next</button>
   </div>
@@ -20,18 +19,25 @@
   <div id="step2" class="step" style="display: none;">
     <h1 id="agePrompt">Aisling?! I heard it was your birthday??? Happy Birthday my Vampire Garfield twilight girlfriend!</h1>
     <p>How old are you turning sweetie?</p>
-    <img src="https://i0.wp.com/the-avocado.org/wp-content/uploads/2023/09/D38DB1DB-BBF3-4F7F-AF93-7C2D7C32505A.jpeg?fit=828%2C609&quality=80&ssl=1&w=640">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-TLW5mp6tNPtK8uclLKzllvNgi5FfzCkprQ&s">
     <input type="number" id="ageInput" placeholder="Enter your age">
     <button onclick="processStep2()">Next</button>
+
+    <!-- Fake Multiple Choice for 90+ -->
+    <div id="ageButtons" style="display: none;">
+      <p>Are you sure that's right?</p>
+      <button onclick="handleAgeChoice('yes')">Yes</button>
+      <button onclick="handleAgeChoice('no')">No</button>
+      <p id="ageResponse"></p>
+      <button id="nextButton90" style="display: none;" onclick="moveToFinalStep(90)">Next</button>
+    </div>
   </div>
 
   <!-- Step 3: Celebration -->
   <div id="step3" class="step" style="display: none;">
     <h2 id="celebrationMessage"></h2>
     <p>I love you!</p>
-    <!-- Replace the URL below with your chosen image -->
-    <img src="https://i.pinimg.com/736x/1d/2d/ea/1d2dea43ec721b85c2e886a72e863038.jpg">
+    <img src="your-image-url-here.jpg" alt="Celebration">
+    <audio id="birthdayHorn" src="your-birthday-horn.mp3"></audio>
   </div>
 
   <script src="script.js"></script>
