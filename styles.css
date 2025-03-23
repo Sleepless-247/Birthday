@@ -1,6 +1,6 @@
 body {
   font-family: "Times New Roman", serif;
-  background-color: #8B0000;
+  background-color: #98568d;
   text-align: center;
   color: white;
   margin: 50px;
@@ -33,6 +33,7 @@ img {
 }
 
 /* Confetti styles */
+/* Confetti styles */
 @keyframes fall {
   0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
   100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
@@ -55,5 +56,16 @@ img {
   height: 10px;
   background-color: gold;
   opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+/* Heart styles */
+.heart {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: pink;
+  opacity: 0.8;
+  clip-path: path("M7.5 12.5s5-3.5 5-7.5-2.5-5-5-2.5-5-2.5-5 2.5 5 7.5 5 7.5z");
   animation: fall linear infinite;
 }
