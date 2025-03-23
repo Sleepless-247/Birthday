@@ -3,31 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Date Invitation</title>
+  <title>Special Invitation</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="start">
-    <h1>Hey, want to go on a date?</h1>
-    <button onclick="showForm()">Yes!</button>
+  <!-- Step 1: Who are you? -->
+  <div id="step1" class="step">
+    <h1>Who are you?</h1>
+    <!-- Replace the URL below with your chosen image -->
+    <img src="https://via.placeholder.com/300x200?text=Your+Image+Here" alt="Custom Image">
+    <input type="text" id="nameInput" placeholder="Enter your answer">
+    <button onclick="processStep1()">Next</button>
   </div>
 
-  <div id="form" style="display: none;">
-    <label for="name">What's your name?</label>
-    <input type="text" id="name">
-    
-    <label for="place">Where should we go?</label>
-    <input type="text" id="place">
-    
-    <label for="time">What time?</label>
-    <input type="time" id="time">
-    
-    <button onclick="submitForm()">Submit</button>
+  <!-- Step 2: Age input -->
+  <div id="step2" class="step" style="display: none;">
+    <h1 id="agePrompt">Aisling?! I heard it was your birthday??? Happy Birthday my Vampire Garfield twilight girlfriend!</h1>
+    <p>How old are you turning sweetie?</p>
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="processStep2()">Next</button>
   </div>
 
-  <div id="celebration" style="display: none;">
-    <h2 id="message"></h2>
-    <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Celebration" width="300">
+  <!-- Step 3: Celebration -->
+  <div id="step3" class="step" style="display: none;">
+    <h2 id="celebrationMessage"></h2>
+    <p>I love you!</p>
+    <!-- Replace the URL below with your chosen image -->
+    <img src="https://via.placeholder.com/300x200?text=I+Love+You!" alt="I love you image">
   </div>
 
   <script src="script.js"></script>
